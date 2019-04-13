@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="hr.foi.myguide.TourSchedule"
+    tools:showIn="@layout/activity_tour_schedule">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutDateFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:clickable="true">
+
+                <EditText
+                    android:id="@+id/selectedDateTimeFrom"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:hint="Date from"
+                    android:textColor="@color/colorTextDarkGrey" />
+
+                <Button
+                    android:id="@+id/btnDateTimeFrom"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:drawable/ic_menu_my_calendar"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutDateTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayoutDateFrom"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:weightSum="1">
+
+                <EditText
+                    android:enabled="false"
+                    android:id="@+id/selectedDateTimeTo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Date to"
+                    android:textColor="@color/colorTextDarkGrey" />
+
+                <Button
+                    android:id="@+id/btnDateTimeTo"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:drawable/ic_menu_my_calendar"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/noteEditText"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayoutDateTo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:hint="Napomena"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="2"
+                android:scrollbars="vertical"
+                android:textColor="@color/colorTextDarkGrey" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/noteEditText"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/locationLabel"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/labelColor"
+                    tools:text="Meeting point" />
+
+                <Spinner
+                    android:id="@+id/locationDropdown"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayoutLocation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_submit"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

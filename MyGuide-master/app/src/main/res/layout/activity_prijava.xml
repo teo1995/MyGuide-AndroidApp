@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="hr.foi.myguide.Prijava"
+    android:background="@drawable/appbg"
+    android:orientation="vertical"
+    >
+    <ScrollView
+        android:id="@+id/tourScheduleDetailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:fontFamily="casual"
+                android:text="MY GUIDE"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="50sp"
+                android:layout_marginTop="71dp"
+                android:layout_marginBottom="70dp" />
+
+            <EditText
+                android:id="@+id/etUsernameLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/edittext_shape"
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorText"
+                />
+
+            <EditText
+                android:background="@drawable/edittext_shape"
+                android:id="@+id/etPasswordLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorText"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Not a member? Sign up now"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>
